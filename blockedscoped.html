@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function xy(){
+        //     var b=5;
+        //     if(b>4){
+        //         let a=5; //block scoped
+        //         console.log(a)
+        //     }
+        //     console.log(a)  //error a is not defined
+        // }
+        // xy();
+
+        function xy(){
+            var b=5;
+            if(b>4){
+                var a=5; //function scoped
+                console.log(a)
+            }
+            console.log(a)  //error a is not defined
+        }
+        xy();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

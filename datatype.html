@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //datatype in javascript (primitive data types )
+        //1. number
+        //2. string
+        //3. boolean
+        //4. null
+        //5. undefined
+        //6. object (non-primitive data types)
+
+
+        // datatype examples primitive data types
+        var num=10; //number
+        var str="hello"; //string
+        var flag=true; //boolean
+        var n=null; //null , intentionally assigned no value
+        var u=undefined; //undefined value not assigned
+        var obj={name:"john", age:30};
+        console.log(typeof num); // number
+        console.log(typeof str); //string
+        console.log(typeof flag); //boolean
+        console.log(typeof n); //object (this is a known bug in javascript)
+        console.log(typeof u); //undefined
+        console.log(typeof obj); //object
+
+        //non-primitive data types
+        var arr=[1,2,3,4,5]; //array
+        console.log(typeof arr); //object
+        var func=function(){ //function
+            console.log("this is a function");
+        }
+        console.log(typeof func); //function
+
+        //object examples
+        const person={
+            firstName:"John",
+            lastName:"Doe",
+            age:25,
+            fullName:function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.writeln("First Name: " + person.firstName);
+        document.writeln("Last Name: " + person.lastName);
+        document.writeln("Age: " + person.age);
+        document.writeln("Full Name: " + person.fullName());
+
+        const person1={
+            id:1,
+            name:"xyz"
+        }
+        document.write(person1.id)
+        document.writeln(person1["name"])
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

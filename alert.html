@@ -1,0 +1,46 @@
+<!-- Write a JavaScript program that first uses the alert box to display a welcome message to the 
+user (Example: Welcome User). Then, use the confirm box to ask the user if they want to 
+continue.  
+1. If the user clicks "OK", proceed to ask for their name using the prompt box and display a personalized greeting (Example: If user enters “Jack”, then display “Hello 
+Jack”). After displaying the greeting using alert box, prompt the user to enter their age.  
+Based on the user's age, use a conditional statement to check if they are 18 or older. 
+If the user is 18 or older, display an alert saying "You are an adult!". If the user is 
+under 18, display an alert saying "You are a minor!".  
+2. If the user clicks "Cancel" in the confirm box at the beginning, display an alert saying 
+"Goodbye". -->
+<html>
+    <head>
+        <script>
+                alert("Welcome User");
+            function conf(){
+                res=confirm("Do you want to continue");
+                if(res==true){
+                    greetings()
+                    age=prompt("Enter your age","your age");
+                    if(age>=18){
+                        alert("You are an adult")
+                    }
+                    else{
+                        alert("You are a minor")
+                    }
+                }
+                else{
+                    alert("Good Bye....")
+                    return false;
+                }
+            }
+            function getval(){
+                username=prompt("Enter user name","your username here");
+                document.writeln(username)
+            }
+            function greetings(){
+                user=prompt("Enter your username");
+                alert(`Hello ${user}`)
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="conf()">Click Here</button>
+    </body>
+</html>
+

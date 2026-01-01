@@ -1,0 +1,54 @@
+<!-- Create a function registerUser() that uses pop-up boxes to gather and validate user input for a 
+new user registration.
+The function should:
+1. Use a while loop to repeatedly prompt the user for a username using the prompt() pop-up box. 
+The loop should continue to run as long as the user's input is an empty string, null, or undefined.
+2. Once a valid username is provided, use another while loop to prompt the user for a password. 
+This loop should continue until the user provides a password that is at least 8 characters long.
+3. After a valid password is entered, use the confirm() pop-up box to ask the user, "Are you sure 
+you want to register with this username and password?".
+4. If the user clicks "Cancel" on the confirmation box, use alert() to display a message 
+"Registration canceled." and end the function.
+5. If the user clicks "OK", use a template literal to display a final alert() message confirming the 
+successful registration, showing both the username and the password. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function registerUser(){
+            let username = "";
+            while(true){
+                let username = prompt("Enter your name")
+                if(username===""|| username === null || username===undefined){
+                    break;
+                }
+                else{
+                        let password="";
+                while(!password)
+                {
+                    let password=prompt("Enter your password")
+                    if(password.length>=8){
+                        res=confirm("Are you sure you want to register with this username and password?")
+                        if (res==false){
+                            alert("Registration canceled.")
+                        }
+                        else{
+                            alert(`Your registration is successful username = ${username} password=${password}`)
+                        }
+                    }
+                }
+                }       
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="registerUser()">Click Here</button>
+</body>
+
+</html>

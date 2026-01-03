@@ -1,0 +1,22 @@
+# Mouse Events
+
+(i) onclick
+(ii) onmouseup
+(iii) onmousedown
+(iv) onmouseover
+(v) onmouseout
+
+# Key Events
+
+(i) onkeypress
+(ii) onkeyup
+(iii) onkeydown
+
+# Form Events
+
+(i) onfocus
+(ii) oninput
+(iii) onblur
+(iv) onchange
+(v) onsubmit
+

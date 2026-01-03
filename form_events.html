@@ -1,0 +1,43 @@
+<!-- Write an HTML and JS to perform the following task 
+(i) add three input text field
+(ii) in the 1st text field convert the entered tag into uppercase when the value of the field is changed using the onchange event
+(iii) in the 2nd text field change the background color to yellow when the field get focused using the onfocus event change the text color to blue while typing using the on input event
+(iv) in the 3rd textfield convert the text to lowercase using onblur event-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+    <script>
+        function myfunction() {
+            var a = document.getElementById("").value;
+            var b = document.getElementById("age").value;
+            alert("Welcome" + a + b)
+        }
+        function convertToUpper(element) {
+            element.value = element.value.toUpperCase();
+        }
+        function inputtxt(x) {
+            x.style.color = "blue";
+        }
+        function convertlower(element) {
+             element.value = element.value.toLowerCase();
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" onsubmit="myfunction()">
+        <label>onchange: </label>
+        <input type="text" onchange="convertToUpper(this)"><br><br>
+        <label>color change: </label>
+        <input type="text" value="Hello" oninput="inputtxt(this)" onfocus="this.style.backgroundColor='Yellow'"><br><br>
+        <label>onblur: </label>
+        <input type="text" id="blur" onblur="convertlower(this)"><br><br>
+        <input type="submit">
+    </form><br>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="stop(event)">
+        <input type="submit">
+    </form>
+    <script>
+        function stop(e){
+            e.preventDefault();// Stops default browser action
+            alert("form submission stopped");
+        }
+    </script>
+</body>
+</html>
